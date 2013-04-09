@@ -1,4 +1,4 @@
-/**
+ï»¿/**
  * jQuery Bracket
  *
  * Copyright (c) 2011-2013, Teijo Laine,
@@ -90,10 +90,10 @@
         var width = parseInt($('.round:first').css('margin-right'))/2
         var drop = true;
         // drop:
-        // [team]¨\
+        // [team]\
         //         \_[team]
         // !drop:
-        //         /¨[team]
+        //         /[team]
         // [team]_/
         if (height < 0) {
           drop = false;

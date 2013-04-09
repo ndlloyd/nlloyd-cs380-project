@@ -7,7 +7,7 @@ NlloydCs380Project::Application.routes.draw do
 
   resources :users
 
-
+  root to: 'tournaments#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

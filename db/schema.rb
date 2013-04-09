@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404160713) do
+ActiveRecord::Schema.define(:version => 20130409030149) do
 
   create_table "contests", :force => true do |t|
     t.string   "firstContestant"
@@ -35,12 +35,11 @@ ActiveRecord::Schema.define(:version => 20130404160713) do
 
   create_table "users", :force => true do |t|
     t.string   "userName"
-    t.string   "passwordDigest"
     t.boolean  "admin"
     t.string   "firstName"
     t.string   "lastName"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

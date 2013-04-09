@@ -2,7 +2,8 @@
 
 <table>
   <tr>
-    <th>Description</th>
+    <th>Short Description</th>
+    <th>Full Description</th>
     <th>Owner</th>
     <th>Winnerhigh</th>
     <th></th>
@@ -12,7 +13,8 @@
 
 <% @tournaments.each do |tournament| %>
   <tr>
-    <td><%= tournament.description %></td>
+    <td><%= tournament.shortDescription %></td>
+    <td><%= tournament.fullDescription %></td>
     <td><%= tournament.owner %></td>
     <td><%= tournament.winnerHigh %></td>
     <td><%= link_to 'Show', tournament %></td>
