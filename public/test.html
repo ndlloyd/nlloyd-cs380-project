@@ -1,11 +1,48 @@
 <html>
 <head><title>Testing Jquery-Bracket </title>
 
-<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="jquery.bracket.min.js"></script>
-<link rel="stylesheet" type="text/css" href="jquery.bracket.min.css" />
+<script type="text/javascript" src="assets\jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="assets\jquery.bracket.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets\jquery.bracket.min.css" />
 </head>
 <body>
+<script type="text/javascript">
+  var saveData = {
+      teams : [
+        ["Team 1", "Team 2"], /* first matchup */
+        ["Team 3", "Team 4"]  /* second matchup */
+      ],
+      results : [[1,0], [2,7]]
+    }
 
+  /* Called whenever bracket is modified
+   *
+   * data:     changed bracket object in format given to init
+   * userData: optional data given when bracket is created.
+   */
+  function saveFn(data, userData) {
+    var json = jQuery.toJSON(data)
+    $('#saveOutput').text('POST '+userData+' '+json)
+    /* You probably want to do something like this */
+    jQuery.ajax("rest/"+userData, {contentType: 'application/json',
+                                  dataType: 'json',
+                                  type: 'post',
+                                  data: json})
+    
+  }
+
+  $(function() {
+      var container = $('div#save .demo')
+      container.bracket({
+        init: saveData,
+        save: saveFn,
+        userData: "http://localhost:3000/contests.json"})
+
+      /* You can also inquiry the current data */
+      var data = container.bracket('data')
+      $('#dataOutput').text(jQuery.toJSON(data))
+    })
+  </script>
+<div class="demo"><div class="jQBracket lr" style="height: 130px; width: 320px;"><div class="tools"><span class="increment">+</span><span class="decrement">-</span><span class="doubleElimination">de</span></div><div class="bracket" style="height: 100px;"><div class="round"><div class="match" style="height: 50px;"><div class="teamContainer" style="top: 7px;"><div class="team win" id="team-0" index="0"><b>Team 1</b><span id="result-0">1</span></div><div class="team lose" id="team-1" index="1"><b>Team 5</b><span id="result-1">0</span></div><div class="connector" style="height: 25px; width: 20px; right: -22px; top: 9px; border-bottom-style: none;"><div class="connector" style="width: 20px; right: -20px; bottom: 0px;"></div></div></div></div><div class="match" style="height: 50px;"><div class="teamContainer" style="top: 7px;"><div class="team lose" id="team-2" index="2"><b>Team 3</b><span id="result-2">2</span></div><div class="team win" id="team-3" index="3"><b>Team 4</b><span id="result-3">7</span></div><div class="connector" style="height: 25px; width: 20px; right: -22px; bottom: 9px; border-top-style: none;"><div class="connector" style="width: 20px; right: -20px; top: 0px;"></div></div></div></div></div><div class="round"><div class="match" style="height: 50px;"><div class="teamContainer np" style="position: absolute; bottom: -18px;"><div class="team" index="0"><b>Team 1</b><span id="result-4">0</span></div><div class="team" index="3"><b>Team 4</b><span id="result-5">0</span></div></div></div><div class="match" style="height: 50px;"><div class="teamContainer np" style="top: 36px;"><div class="team" index="1"><b>Team 5</b><span id="result-6">0</span></div><div class="team" index="2"><b>Team 3</b><span id="result-7">0</span></div></div></div></div></div></div></div>
 </body>
 </html>
