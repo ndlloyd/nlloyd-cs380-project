@@ -1,0 +1,3678 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (88.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (75.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130404160124)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userName" varchar(255), "passwordDigest" varchar(255), "admin" boolean, "firstName" varchar(255), "lastName" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (31.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130404160124)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userName" varchar(255), "passwordDigest" varchar(255), "admin" boolean, "firstName" varchar(255), "lastName" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130404160124)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userName" varchar(255), "passwordDigest" varchar(255), "admin" boolean, "firstName" varchar(255), "lastName" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130404160124')[0m
+  [1m[35m (170.0ms)[0m  commit transaction
+Migrating to CreateTournaments (20130404160334)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "tournaments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "shortDescription" varchar(255), "fullDescription" varchar(255), "owner" integer, "winnerHigh" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130404160334')[0m
+  [1m[35m (93.0ms)[0m  commit transaction
+Migrating to CreateContests (20130404160713)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "contests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstContestant" varchar(255), "secondContestant" varchar(255), "firstScore" integer, "secondScore" integer, "tournament_id" integer, "bracket" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130404160713')[0m
+  [1m[35m (97.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-08 09:39:04 -0500
+Served asset /rails.png - 200 OK (20ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-08 10:39:19 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (60.0ms)
+Compiled contests.css  (52ms)  (pid 5980)
+Compiled jquery.bracket.css  (0ms)  (pid 5980)
+Compiled jquery.bracket.css  (72ms)  (pid 5980)
+Compiled scaffolds.css  (15ms)  (pid 5980)
+Compiled tournaments.css  (5ms)  (pid 5980)
+Compiled users.css  (5ms)  (pid 5980)
+Compiled application.css  (306ms)  (pid 5980)
+Compiled jquery.js  (2ms)  (pid 5980)
+Compiled jquery_ujs.js  (0ms)  (pid 5980)
+Compiled contests.js  (812ms)  (pid 5980)
+Completed 500 Internal Server Error in 2033ms
+
+ActionView::Template::Error (C:/Sites/nlloyd-cs380-project/app/assets/javascripts/jquery.bracket.js has a invalid UTF-8 byte sequence):
+    3: <head>
+    4:   <title>NlloydCs380Project</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___585184309_45767916'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (75.0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 15:49:02 -0500
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" 
+  Rendered contests/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (C:/Sites/nlloyd-cs380-project/app/assets/javascripts/jquery.bracket.js has a invalid UTF-8 byte sequence):
+    3: <head>
+    4:   <title>NlloydCs380Project</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___585184309_45767916'
+  app/controllers/contests_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (52.0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 16:05:14 -0500
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (C:/Sites/nlloyd-cs380-project/app/assets/javascripts/jquery.bracket.js has a invalid UTF-8 byte sequence):
+    3: <head>
+    4:   <title>NlloydCs380Project</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___585184309_45767916'
+  app/controllers/contests_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 16:06:07 -0500
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" 
+  Rendered contests/index.html.erb within layouts/application (0.0ms)
+Compiled jquery.bracket.js  (0ms)  (pid 5980)
+Compiled tournaments.js  (394ms)  (pid 5980)
+Compiled users.js  (493ms)  (pid 5980)
+Compiled application.js  (993ms)  (pid 5980)
+Completed 200 OK in 1079ms (Views: 1078.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /contests.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /jquery.bracket.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /tournaments.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /jquery_ujs.js - 200 OK (19ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:08 -0500
+Served asset /contests.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:09 -0500
+Served asset /jquery.bracket.js - 200 OK (1ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:09 -0500
+Served asset /tournaments.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:09 -0500
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:09 -0500
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/contests/new" for 127.0.0.1 at 2013-04-08 16:06:17 -0500
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (70.0ms)
+  Rendered contests/new.html.erb within layouts/application (122.0ms)
+Completed 200 OK in 147ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:17 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 16:06:33 -0500
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:33 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-08 16:06:38 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:38 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-08 16:06:39 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:06:39 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-08 16:07:34 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "user"=>{"userName"=>"nlloyd", "passwordDigest"=>"[FILTERED]", "admin"=>"1", "firstName"=>"Nathan", "lastName"=>"Lloyd"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: passwordDigest, admin):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:07 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:57 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:58 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:08:58 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2013-04-08 16:08:59 -0500
+Processing by TournamentsController#new as HTML
+  Rendered tournaments/_form.html.erb (6.0ms)
+  Rendered tournaments/new.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `description' for #<Tournament:0x5761590>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :description %><br />
+    16:     <%= f.text_field :description %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :owner %><br />
+  app/views/tournaments/_form.html.erb:16:in `block in _app_views_tournaments__form_html_erb__577446556_38898984'
+  app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb__577446556_38898984'
+  app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__602954273_39279936'
+  app/controllers/tournaments_controller.rb:29:in `new'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (48.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-08 16:11:47 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 480ms (Views: 227.0ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /contests.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /tournaments.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 16:11:48 -0500
+Served asset /contests.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 16:11:49 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 16:11:49 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 16:11:49 -0500
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 16:11:49 -0500
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2013-04-08 16:11:51 -0500
+Processing by TournamentsController#new as HTML
+  Rendered tournaments/_form.html.erb (83.0ms)
+  Rendered tournaments/new.html.erb within layouts/application (120.0ms)
+Completed 500 Internal Server Error in 139ms
+
+ActionView::Template::Error (undefined method `description' for #<Tournament:0x3cc72a8>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :description %><br />
+    16:     <%= f.text_field :description %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :owner %><br />
+  app/views/tournaments/_form.html.erb:16:in `block in _app_views_tournaments__form_html_erb__663824591_34200720'
+  app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb__663824591_34200720'
+  app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___752576691_31540104'
+  app/controllers/tournaments_controller.rb:29:in `new'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-08 20:58:29 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (138.0ms)
+Completed 500 Internal Server Error in 537ms
+
+ActionView::Template::Error (undefined method `longDescription' for #<Tournament:0x47defe8>):
+    14: <% @tournaments.each do |tournament| %>
+    15:   <tr>
+    16:     <td><%= tournament.shortDescription %></td>
+    17:     <td><%= tournament.longDescription %></td>
+    18:     <td><%= tournament.owner %></td>
+    19:     <td><%= tournament.winnerHigh %></td>
+    20:     <td><%= link_to 'Show', tournament %></td>
+  app/views/tournaments/index.html.erb:17:in `block in _app_views_tournaments_index_html_erb__823893822_39172500'
+  app/views/tournaments/index.html.erb:14:in `each'
+  app/views/tournaments/index.html.erb:14:in `_app_views_tournaments_index_html_erb__823893822_39172500'
+  app/controllers/tournaments_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-08 21:02:04 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `longDescription' for #<Tournament:0x4a63730>):
+    14: <% @tournaments.each do |tournament| %>
+    15:   <tr>
+    16:     <td><%= tournament.shortDescription %></td>
+    17:     <td><%= tournament.longDescription %></td>
+    18:     <td><%= tournament.owner %></td>
+    19:     <td><%= tournament.winnerHigh %></td>
+    20:     <td><%= link_to 'Show', tournament %></td>
+  app/views/tournaments/index.html.erb:17:in `block in _app_views_tournaments_index_html_erb__823893822_39172500'
+  app/views/tournaments/index.html.erb:14:in `each'
+  app/views/tournaments/index.html.erb:14:in `_app_views_tournaments_index_html_erb__823893822_39172500'
+  app/controllers/tournaments_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (52.0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 117ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /contests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /tournaments.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /contests.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:51 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:52 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:52 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:52 -0500
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/contests/new" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (26.0ms)
+  Rendered contests/new.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 103ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:56 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:56 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:56 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:56 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:02:56 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-08 21:21:52 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:52 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:52 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:52 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:52 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-08 21:21:55 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 50ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:21:56 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-08 21:22:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "user"=>{"userName"=>"nlloyd", "passwordDigest"=>"[FILTERED]", "admin"=>"1", "firstName"=>"Nathan", "lastName"=>"Lloyd"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: passwordDigest, admin):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-08 21:26:22 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "user"=>{"userName"=>"nlloyd", "passwordDigest"=>"[FILTERED]", "admin"=>"1", "firstName"=>"Nathan", "lastName"=>"Lloyd"}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (54.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "firstName", "lastName", "passwordDigest", "updated_at", "userName") VALUES (?, ?, ?, ?, ?, ?, ?)  [["admin", true], ["created_at", Tue, 09 Apr 2013 02:26:22 UTC +00:00], ["firstName", "Nathan"], ["lastName", "Lloyd"], ["passwordDigest", "0"], ["updated_at", Tue, 09 Apr 2013 02:26:22 UTC +00:00], ["userName", "nlloyd"]]
+  [1m[36m (49.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 116ms (ActiveRecord: 104.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-04-08 21:26:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:22 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:22 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:22 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:22 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:22 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:23 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-08 21:26:28 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:28 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:29 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:53 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:54 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:26:54 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-08 21:27:10 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `longDescription' for #<Tournament:0x47dc390>):
+    14: <% @tournaments.each do |tournament| %>
+    15:   <tr>
+    16:     <td><%= tournament.shortDescription %></td>
+    17:     <td><%= tournament.longDescription %></td>
+    18:     <td><%= tournament.owner %></td>
+    19:     <td><%= tournament.winnerHigh %></td>
+    20:     <td><%= link_to 'Show', tournament %></td>
+  app/views/tournaments/index.html.erb:17:in `block in _app_views_tournaments_index_html_erb__823893822_39172500'
+  app/views/tournaments/index.html.erb:14:in `each'
+  app/views/tournaments/index.html.erb:14:in `_app_views_tournaments_index_html_erb__823893822_39172500'
+  app/controllers/tournaments_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-08 21:30:59 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 469ms (Views: 227.0ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /tournaments.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /contests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:00 -0500
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2013-04-08 21:31:07 -0500
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tournaments/show.html.erb within layouts/application (88.0ms)
+Completed 500 Internal Server Error in 101ms
+
+ActionView::Template::Error (undefined method `longDescription' for #<Tournament:0x4196190>):
+    7: 
+    8: <p>
+    9:   <b>Description:</b>
+    10:   <%= @tournament.longDescription %>
+    11: </p>
+    12: 
+    13: <p>
+  app/views/tournaments/show.html.erb:10:in `_app_views_tournaments_show_html_erb___982456297_36120024'
+  app/controllers/tournaments_controller.rb:18:in `show'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2013-04-08 21:31:39 -0500
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered tournaments/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:39 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:39 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:39 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:39 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:39 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:40 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/tournaments/1/edit" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Processing by TournamentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTournament Load (1.0ms)[0m  SELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tournaments/_form.html.erb (20.0ms)
+  Rendered tournaments/edit.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:46 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:46 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:46 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:46 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:31:46 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/tournaments/1" for 127.0.0.1 at 2013-04-08 21:31:50 -0500
+Processing by TournamentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "tournament"=>{"shortDescription"=>"Nathan's Tournament", "fullDescription"=>"Nathan made up this tournament to show off", "owner"=>"1", "winnerHigh"=>"1"}, "commit"=>"Update Tournament", "id"=>"1"}
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 2ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: fullDescription):
+  app/controllers/tournaments_controller.rb:62:in `block in update'
+  app/controllers/tournaments_controller.rb:61:in `update'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.0ms)
+
+
+Started PUT "/tournaments/1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Processing by TournamentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "tournament"=>{"shortDescription"=>"Nathan's Tournament", "fullDescription"=>"Nathan made up this tournament to show off", "owner"=>"1", "winnerHigh"=>"1"}, "commit"=>"Update Tournament", "id"=>"1"}
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  UPDATE "tournaments" SET "owner" = 1, "updated_at" = '2013-04-09 02:32:27.150069' WHERE "tournaments"."id" = 1
+  [1m[36m (58.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/tournaments/1
+Completed 302 Found in 139ms (ActiveRecord: 60.0ms)
+
+
+Started GET "/tournaments/1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tournaments/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:45 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:46 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:46 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:46 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests/new" for 127.0.0.1 at 2013-04-08 21:32:49 -0500
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (6.0ms)
+  Rendered contests/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 41ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:49 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:32:50 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/contests" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Processing by ContestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "contest"=>{"firstContestant"=>"Nathan", "secondContestant"=>"Owen", "firstScore"=>"", "secondScore"=>"", "tournament_id"=>"1", "bracket"=>"1"}, "commit"=>"Create Contest"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contests" ("bracket", "created_at", "firstContestant", "firstScore", "secondContestant", "secondScore", "tournament_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bracket", 1], ["created_at", Tue, 09 Apr 2013 02:33:11 UTC +00:00], ["firstContestant", "Nathan"], ["firstScore", nil], ["secondContestant", "Owen"], ["secondScore", nil], ["tournament_id", 1], ["updated_at", Tue, 09 Apr 2013 02:33:11 UTC +00:00]]
+  [1m[35m (48.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/contests/1
+Completed 302 Found in 54ms (ActiveRecord: 50.0ms)
+
+
+Started GET "/contests/1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered contests/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:12 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:12 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:12 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:12 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:12 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" 
+  Rendered contests/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:15 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests/new" for 127.0.0.1 at 2013-04-08 21:33:18 -0500
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (4.0ms)
+  Rendered contests/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:18 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:19 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/contests" for 127.0.0.1 at 2013-04-08 21:33:27 -0500
+Processing by ContestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "contest"=>{"firstContestant"=>"Sam", "secondContestant"=>"Bob", "firstScore"=>"", "secondScore"=>"", "tournament_id"=>"", "bracket"=>""}, "commit"=>"Create Contest"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "contests" ("bracket", "created_at", "firstContestant", "firstScore", "secondContestant", "secondScore", "tournament_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["bracket", nil], ["created_at", Tue, 09 Apr 2013 02:33:27 UTC +00:00], ["firstContestant", "Sam"], ["firstScore", nil], ["secondContestant", "Bob"], ["secondScore", nil], ["tournament_id", nil], ["updated_at", Tue, 09 Apr 2013 02:33:27 UTC +00:00]]
+  [1m[36m (50.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/contests/2
+Completed 302 Found in 54ms (ActiveRecord: 51.0ms)
+
+
+Started GET "/contests/2" for 127.0.0.1 at 2013-04-08 21:33:27 -0500
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered contests/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:27 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:27 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:28 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests/2/edit" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered contests/_form.html.erb (4.0ms)
+  Rendered contests/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:31 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:32 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:32 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:32 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/contests/2" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Processing by ContestsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "contest"=>{"firstContestant"=>"Sam", "secondContestant"=>"Bob", "firstScore"=>"", "secondScore"=>"", "tournament_id"=>"1", "bracket"=>"2"}, "commit"=>"Update Contest", "id"=>"2"}
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  UPDATE "contests" SET "tournament_id" = 1, "bracket" = 2, "updated_at" = '2013-04-09 02:33:36.381992' WHERE "contests"."id" = 2
+  [1m[36m (50.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/contests/2
+Completed 302 Found in 55ms (ActiveRecord: 52.0ms)
+
+
+Started GET "/contests/2" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered contests/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:37 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:37 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:37 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:37 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests/2/edit" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered contests/_form.html.erb (4.0ms)
+  Rendered contests/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:43 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" 
+  Rendered contests/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:47 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/contests/new" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (4.0ms)
+  Rendered contests/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:52 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/contests" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Processing by ContestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "contest"=>{"firstContestant"=>"Tom", "secondContestant"=>"Jerry", "firstScore"=>"", "secondScore"=>"", "tournament_id"=>"1", "bracket"=>"3"}, "commit"=>"Create Contest"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "contests" ("bracket", "created_at", "firstContestant", "firstScore", "secondContestant", "secondScore", "tournament_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["bracket", 3], ["created_at", Tue, 09 Apr 2013 02:34:25 UTC +00:00], ["firstContestant", "Tom"], ["firstScore", nil], ["secondContestant", "Jerry"], ["secondScore", nil], ["tournament_id", 1], ["updated_at", Tue, 09 Apr 2013 02:34:25 UTC +00:00]]
+  [1m[36m (61.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/contests/3
+Completed 302 Found in 65ms (ActiveRecord: 62.0ms)
+
+
+Started GET "/contests/3" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered contests/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /tournaments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:25 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:30 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests/new" for 127.0.0.1 at 2013-04-08 21:34:32 -0500
+Processing by ContestsController#new as HTML
+  Rendered contests/_form.html.erb (4.0ms)
+  Rendered contests/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:32 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:32 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:32 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:33 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/contests" for 127.0.0.1 at 2013-04-08 21:34:43 -0500
+Processing by ContestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "contest"=>{"firstContestant"=>"Thor", "secondContestant"=>"Loki", "firstScore"=>"", "secondScore"=>"", "tournament_id"=>"1", "bracket"=>"4"}, "commit"=>"Create Contest"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contests" ("bracket", "created_at", "firstContestant", "firstScore", "secondContestant", "secondScore", "tournament_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bracket", 4], ["created_at", Tue, 09 Apr 2013 02:34:43 UTC +00:00], ["firstContestant", "Thor"], ["firstScore", nil], ["secondContestant", "Loki"], ["secondScore", nil], ["tournament_id", 1], ["updated_at", Tue, 09 Apr 2013 02:34:43 UTC +00:00]]
+  [1m[35m (70.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/contests/4
+Completed 302 Found in 74ms (ActiveRecord: 71.0ms)
+
+
+Started GET "/contests/4" for 127.0.0.1 at 2013-04-08 21:34:43 -0500
+Processing by ContestsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered contests/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:44 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130404160124)
+Migrating to CreateTournaments (20130404160334)
+Migrating to CreateContests (20130404160713)
+Migrating to RemovePasswordDigestFromUsers (20130409030149)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userName" varchar(255), "passwordDigest" varchar(255), "admin" boolean, "firstName" varchar(255), "lastName" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_users" ("id","userName","passwordDigest","admin","firstName","lastName","created_at","updated_at") VALUES (1, 'nlloyd', '0', 't', 'Nathan', 'Lloyd', '2013-04-09 02:26:22.758634', '2013-04-09 02:26:22.758634')
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userName" varchar(255), "admin" boolean, "firstName" varchar(255), "lastName" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "users" ("id","userName","admin","firstName","lastName","created_at","updated_at") VALUES (1, 'nlloyd', 't', 'Nathan', 'Lloyd', '2013-04-09 02:26:22.758634', '2013-04-09 02:26:22.758634')
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "altered_users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130409030149')
+  [1m[36m (75.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" 
+  Rendered contests/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 22.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 22:17:34 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 22:17:35 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests/1/edit" for 127.0.0.1 at 2013-04-08 22:29:26 -0500
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered contests/_form.html.erb (5.0ms)
+  Rendered contests/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 22:29:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests.json" for 127.0.0.1 at 2013-04-08 22:30:30 -0500
+Processing by ContestsController#index as JSON
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" 
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-09 07:46:24 -0500
+Served asset /rails.png - 304 Not Modified (8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-09 07:47:55 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:28 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:29 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:29 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:29 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:29 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tournaments/new" for 127.0.0.1 at 2013-04-09 07:48:32 -0500
+Processing by TournamentsController#new as HTML
+  Rendered tournaments/_form.html.erb (4.0ms)
+  Rendered tournaments/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 39ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:32 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:32 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:33 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/tournaments" for 127.0.0.1 at 2013-04-09 07:48:46 -0500
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDgN8K17sBuNU9guiBr5q6Scwy9083YVZrTKStt9aLs=", "tournament"=>{"shortDescription"=>"Nathan's Tournament", "fullDescription"=>"Nathan made up this tournament to show off", "owner"=>"1", "winnerHigh"=>"1"}, "commit"=>"Create Tournament"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "tournaments" ("created_at", "fullDescription", "owner", "shortDescription", "updated_at", "winnerHigh") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 09 Apr 2013 12:48:46 UTC +00:00], ["fullDescription", "Nathan made up this tournament to show off"], ["owner", 1], ["shortDescription", "Nathan's Tournament"], ["updated_at", Tue, 09 Apr 2013 12:48:46 UTC +00:00], ["winnerHigh", true]]
+  [1m[35m (77.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/tournaments/2
+Completed 302 Found in 83ms (ActiveRecord: 79.0ms)
+
+
+Started GET "/tournaments/2" for 127.0.0.1 at 2013-04-09 07:48:46 -0500
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered tournaments/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:46 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:46 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:46 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:47 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-09 07:48:54 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:54 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:54 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-09 07:48:55 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-09 08:43:26 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:26 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:26 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:26 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:26 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:26 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:27 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tournaments/2" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered tournaments/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:31 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:32 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:32 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:32 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:32 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:32 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-09 08:43:32 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-16 07:57:26 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (89.0ms)
+Compiled jquery.bracket.min.css  (0ms)  (pid 4016)
+Compiled application.css  (42ms)  (pid 4016)
+Compiled jquery.bracket.min.js  (1ms)  (pid 4016)
+Compiled application.js  (39ms)  (pid 4016)
+Completed 200 OK in 1374ms (Views: 931.0ms | ActiveRecord: 66.0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /tournaments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /jquery.bracket.min.css - 200 OK (3ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /contests.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /contests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /jquery.bracket.min.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /tournaments.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 07:57:28 -0500
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 07:57:35 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery.bracket.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/jquery-1.6.2.min.js" for 127.0.0.1 at 2013-04-16 07:57:35 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery-1.6.2.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 07:57:35 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery.bracket.min.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/jquery-1.6.2.min.js" for 127.0.0.1 at 2013-04-16 08:01:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery-1.6.2.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:01:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery.bracket.min.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:01:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery.bracket.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/stylesheets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:03:31 -0500
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/jquery.bracket.min.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/javascrips/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:03:31 -0500
+
+ActionController::RoutingError (No route matches [GET] "/javascrips/jquery.bracket.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/jquery-1.6.2.min.js" for 127.0.0.1 at 2013-04-16 08:03:31 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery-1.6.2.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/jquery-1.6.2.min.js" for 127.0.0.1 at 2013-04-16 08:10:28 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery-1.6.2.min.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:10:28 -0500
+Served asset /jquery.bracket.min.js - 200 OK (70ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:10:28 -0500
+Served asset /jquery.bracket.min.css - 200 OK (21ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-04-16 08:13:26 -0500
+Error compiling asset jquery-1.8.3.min.js:
+Errno::EACCES: Permission denied - C:/Sites/nlloyd-cs380-project/app/assets/javascripts/jquery-1.8.3.min.js
+Served asset /jquery-1.8.3.min.js - 500 Internal Server Error
+
+
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:13:26 -0500
+Served asset /jquery.bracket.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:13:26 -0500
+Served asset /jquery.bracket.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:25:29 -0500
+Served asset /jquery.bracket.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-04-16 08:25:29 -0500
+Error compiling asset jquery-1.8.3.min.js:
+Errno::EACCES: Permission denied - C:/Sites/nlloyd-cs380-project/app/assets/javascripts/jquery-1.8.3.min.js
+Served asset /jquery-1.8.3.min.js - 500 Internal Server Error
+
+
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:25:29 -0500
+Served asset /jquery.bracket.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:27:42 -0500
+Served asset /jquery.bracket.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:27:42 -0500
+Served asset /jquery.bracket.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-04-16 08:27:42 -0500
+Compiled jquery-1.8.3.min.js  (0ms)  (pid 4016)
+Served asset /jquery-1.8.3.min.js - 200 OK (50ms)
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:32:31 -0500
+Served asset /jquery.bracket.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-04-16 08:32:31 -0500
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:32:31 -0500
+Served asset /jquery.bracket.min.css - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (1.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (2.0ms)
+Compiled application.js  (8ms)  (pid 4016)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:37 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /jquery-1.8.3.min.js - 200 OK (3ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:38 -0500
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/tournaments/2" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered tournaments/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 08:35:47 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 08:35:48 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Processing by ContestsController#index as HTML
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" 
+  Rendered contests/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 87ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /tournaments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 08:36:04 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests.json" for 127.0.0.1 at 2013-04-16 08:36:11 -0500
+Processing by ContestsController#index as JSON
+  [1m[36mContest Load (1.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-04-16 08:39:35 -0500
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:39:35 -0500
+Served asset /jquery.bracket.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:39:35 -0500
+Served asset /jquery.bracket.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 08:40:34 -0500
+Served asset /jquery.bracket.min.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 08:40:34 -0500
+Served asset /jquery.bracket.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-04-16 08:40:34 -0500
+Served asset /jquery-1.8.3.min.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /tournaments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 10:23:05 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css" for 127.0.0.1 at 2013-04-16 10:24:43 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js" for 127.0.0.1 at 2013-04-16 10:24:43 -0500
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js" for 127.0.0.1 at 2013-04-16 10:24:43 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests" for 127.0.0.1 at 2013-04-16 10:26:03 -0500
+Processing by ContestsController#index as HTML
+  [1m[36mContest Load (0.0ms)[0m  [1mSELECT "contests".* FROM "contests" [0m
+  Rendered contests/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 10:26:03 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 10:26:03 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 10:26:03 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 10:26:04 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/contests.json" for 127.0.0.1 at 2013-04-16 10:26:05 -0500
+Processing by ContestsController#index as JSON
+  [1m[35mContest Load (1.0ms)[0m  SELECT "contests".* FROM "contests" 
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-16 10:27:31 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:31 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:31 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:31 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:31 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:31 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /tournaments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:32 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/tournaments" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.bracket.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /jquery.bracket.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /jquery.bracket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 10:27:42 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
