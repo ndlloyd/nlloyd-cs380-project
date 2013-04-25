@@ -8,7 +8,7 @@ SampleApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
-  root to: 'static_pages#home'
+  root to: 'tournaments#index'
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
