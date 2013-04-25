@@ -16470,3 +16470,23 @@ Migrating to CreateTournaments (20130425031315)
   [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130425031315')[0m
   [1m[35m (80.0ms)[0m  commit transaction
   [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130130162413)
+Migrating to AddIndexToUsersEmail (20130130173352)
+Migrating to AddPasswordDigestToUsers (20130130174516)
+Migrating to AddRememberTokenToUsers (20130213210923)
+Migrating to AddAdminToUsers (20130220225822)
+Migrating to CreateMicroposts (20130227193107)
+Migrating to CreateRelationships (20130312104948)
+Migrating to CreateTournaments (20130425031315)
+Migrating to CreateContests (20130425040052)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "contests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstContestant" varchar(255), "secondContestant" varchar(255), "firstScore" integer, "secondScore" integer, "tournament_id" integer, "bracket" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_contests_on_tournament_id" ON "contests" ("tournament_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE INDEX "index_contests_on_bracket" ON "contests" ("bracket")
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130425040052')[0m
+  [1m[35m (63.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m

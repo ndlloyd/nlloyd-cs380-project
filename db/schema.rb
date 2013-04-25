@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425031315) do
+ActiveRecord::Schema.define(:version => 20130425040052) do
+
+  create_table "contests", :force => true do |t|
+    t.string   "firstContestant"
+    t.string   "secondContestant"
+    t.integer  "firstScore"
+    t.integer  "secondScore"
+    t.integer  "tournament_id"
+    t.integer  "bracket"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "contests", ["bracket"], :name => "index_contests_on_bracket"
+  add_index "contests", ["tournament_id"], :name => "index_contests_on_tournament_id"
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
