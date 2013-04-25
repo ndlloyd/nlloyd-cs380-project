@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Shortdescription:</b>
+  <%= @tournament.shortDescription %>
+</p>
+
+<p>
+  <b>Fulldescription:</b>
+  <%= @tournament.fullDescription %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @tournament.owner %>
+</p>
+
+<p>
+  <b>Winnerhigh:</b>
+  <%= @tournament.winnerHigh %>
+</p>
+
+
+<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+<%= link_to 'Back', tournaments_path %>

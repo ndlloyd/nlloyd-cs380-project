@@ -16453,3 +16453,20 @@ Served asset /users.js - 304 Not Modified (2ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-23 09:39:38 -0500
 Served asset /application.js - 304 Not Modified (30ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130130162413)
+Migrating to AddIndexToUsersEmail (20130130173352)
+Migrating to AddPasswordDigestToUsers (20130130174516)
+Migrating to AddRememberTokenToUsers (20130213210923)
+Migrating to AddAdminToUsers (20130220225822)
+Migrating to CreateMicroposts (20130227193107)
+Migrating to CreateRelationships (20130312104948)
+Migrating to CreateTournaments (20130425031315)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "tournaments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "shortDescription" varchar(255), "fullDescription" varchar(255), "owner" integer, "winnerHigh" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130425031315')[0m
+  [1m[35m (80.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
