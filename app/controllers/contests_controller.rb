@@ -6,7 +6,7 @@ class ContestsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @contests }
+      format.json { render json: @contest }
     end
   end
 
