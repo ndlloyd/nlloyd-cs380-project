@@ -36588,3 +36588,2036 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 15:05:36 -0500
 Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-05-29 15:07:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AlJJXG3aPeJJAhlsQVvYaoSPrrkE4PyI/Bn6sQBeMe4=", "session"=>{"email"=>"nlloyd@smumn.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'nlloyd@smumn.edu' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 85ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-05-29 15:07:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'Er_C4HhEk6IZp2AgY5Icjg' LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:45 -0500
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:45 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:45 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:46 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:47 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:48 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:48 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 15:07:48 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2013-05-29 15:08:17 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AlJJXG3aPeJJAhlsQVvYaoSPrrkE4PyI/Bn6sQBeMe4="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 15:08:17 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (1.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /custom.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:18 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:19 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:20 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:20 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:20 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:20 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:20 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:20 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 15:08:20 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-05-29 15:25:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AlJJXG3aPeJJAhlsQVvYaoSPrrkE4PyI/Bn6sQBeMe4=", "session"=>{"email"=>"nlloyd@smumn.edu", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'nlloyd@smumn.edu' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 91ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-05-29 15:25:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'Er_C4HhEk6IZp2AgY5Icjg' LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:01 -0500
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /custom.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:02 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:03 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:04 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:04 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:04 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:04 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:04 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'Er_C4HhEk6IZp2AgY5Icjg' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/_user.html.erb (1.0ms)
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /custom.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:09 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:10 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:11 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2013-05-29 15:25:18 -0500
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'Er_C4HhEk6IZp2AgY5Icjg' LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:18 -0500
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:18 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:18 -0500
+Served asset /custom.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:18 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:18 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:19 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:20 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'Er_C4HhEk6IZp2AgY5Icjg' LIMIT 1
+  Rendered layouts/_header.html.erb (18.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /custom.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 15:25:22 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:23 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 15:25:24 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 16:24:27 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'Er_C4HhEk6IZp2AgY5Icjg' LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (16.0ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:28 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:29 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:30 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:30 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:30 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:30 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:30 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 16:24:33 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'Er_C4HhEk6IZp2AgY5Icjg' LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:33 -0500
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /tournaments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:34 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:35 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:36 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:36 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:36 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:36 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:36 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AlJJXG3aPeJJAhlsQVvYaoSPrrkE4PyI/Bn6sQBeMe4="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /custom.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:39 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:40 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 16:24:41 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 16:33:40 -0500
+Processing by TournamentsController#index as HTML
+  [1m[36mTournament Load (0.0ms)[0m  [1mSELECT "tournaments".* FROM "tournaments" [0m
+  Rendered tournaments/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 172ms
+
+ActionView::Template::Error (Invalid CSS after "}": expected "}", was ""
+  (in C:/Sites/nlloyd-cs380-project/app/assets/stylesheets/custom.css.scss)):
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= stylesheet_link_tag    "application", media: "all" %>
+    6:     <%= javascript_include_tag "application" %>
+    7:     <%= csrf_meta_tags %>
+    8:     <%= render 'layouts/shim' %>    
+  app/assets/stylesheets/custom.css.scss:223
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__163588628_34009356'
+  app/controllers/tournaments_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 16:34:08 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (0.0ms)
+Compiled custom.css  (3324ms)  (pid 7496)
+Compiled application.css  (3ms)  (pid 7496)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 3522ms (Views: 3522.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:11 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:11 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:11 -0500
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:11 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:11 -0500
+Served asset /custom.css - 200 OK (39ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:11 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:11 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:12 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /shBrushXml.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:13 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-29 16:34:40 -0500
+Processing by TournamentsController#index as HTML
+  [1m[35mTournament Load (0.0ms)[0m  SELECT "tournaments".* FROM "tournaments" 
+  Rendered tournaments/index.html.erb within layouts/application (0.0ms)
+Compiled custom.css  (989ms)  (pid 7496)
+Compiled application.css  (2ms)  (pid 7496)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1227ms (Views: 1226.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /jquery-ui-1.8.16.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contests.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /contests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /custom.css - 200 OK (11ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /application.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery.bracket-site.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /jquery.bracket-site.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /jquery.bracket.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shCoreDefault.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:41 -0500
+Served asset /shCoreDefault.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.css?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /tournaments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contests.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:42 -0500
+Served asset /contests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ga.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /ga.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.6.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /jquery-1.6.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.bracket.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /jquery.bracket.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.json-2.2.min.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /jquery.json-2.2.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushJScript.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /shBrushJScript.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shBrushXml.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /shBrushXml.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/shCore.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /shCore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tournaments.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /tournaments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-29 16:34:43 -0500
+Served asset /application.js - 304 Not Modified (3ms)

@@ -208,6 +208,13 @@ input {
   float: left;
   margin-right: 10px;
 }
+input[type="text"], input[type="password"] {
+  padding:4px;
+  margin:4px;
+}
+.navbar .btn {
+  margin-top: 0;
+}
 aside {
   textarea {
     height: 100px;
