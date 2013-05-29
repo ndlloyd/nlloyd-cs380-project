@@ -5,15 +5,13 @@
 	  <% if signed_in? %>
 	    Logged in as <%= @current_user.name %>
 	  <% else %>
-	     Not logged in <%= form_for(:session, url: sessions_path) do |f| %>
+	     <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, :class=> "span3", :placeholder=> "EMail" %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, :class=> "span3", :placeholder=> "Password" %>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Sign in", :class=> "btn btn-primary span2" %>
     <% end %>
 	  <% end %>
       <nav>
@@ -36,7 +34,7 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
+            <li><%= link_to "Create Account", new_user_path %></li>
           <% end %>
         </ul>
       </nav>
