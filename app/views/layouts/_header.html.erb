@@ -3,7 +3,7 @@
     <div class="container">
       <%= link_to "Rails Tourney", root_path, id: "logo" %>
 	  <% if signed_in? %>
-	    <%= @user.name %>
+	    <%= @current_user.name %>
 	  <% else %>
 	    <%= form_for(:session, url: sessions_path) do |f| %>
 
