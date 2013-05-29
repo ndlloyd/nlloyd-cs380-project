@@ -3,9 +3,9 @@
     <div class="container">
       <%= link_to "Rails Tourney", root_path, id: "logo" %>
 	  <% if signed_in? %>
-	    <%= @current_user.name %>
+	    Logged in as <%= @current_user.name %>
 	  <% else %>
-	    <%= form_for(:session, url: sessions_path) do |f| %>
+	     Not logged in <%= form_for(:session, url: sessions_path) do |f| %>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
