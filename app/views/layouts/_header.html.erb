@@ -6,15 +6,12 @@
 	    Logged in as <%= @current_user.name %>
 	  <% else %>
 	     <%= form_for(:session, url: sessions_path) do |f| %>
-
-      <%= f.text_field :email, :class=> "span3", :placeholder=> "EMail" %>
-
-      <%= f.password_field :password, :class=> "span3", :placeholder=> "Password" %>
-
-      <%= f.submit "Sign in", :class=> "btn btn-primary span2" %>
+         <%= f.text_field :email, :class=> "span3", :placeholder=> "EMail" %>
+         <%= f.password_field :password, :class=> "span3", :placeholder=> "Password" %>
+         <%= f.submit "Sign in", :class=> "btn btn-primary span2" %>
     <% end %>
 	  <% end %>
-      <nav>
+      
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Help", help_path %></li>
@@ -37,7 +34,7 @@
             <li><%= link_to "Create Account", new_user_path %></li>
           <% end %>
         </ul>
-      </nav>
+      
     </div>
   </div>
 </header>
